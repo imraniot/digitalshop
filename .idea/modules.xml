@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\Android\hackathon\digitalshop\app\app.iml" filepath="E:\Android\hackathon\digitalshop\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/digitalshop.iml" filepath="$PROJECT_DIR$/digitalshop.iml" />
+      <module fileurl="file://E:\Android\hackathon\digitalshop\digitalshop.iml" filepath="E:\Android\hackathon\digitalshop\digitalshop.iml" />
     </modules>
   </component>
 </project>
