@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg3"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg3"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/imagelogo2"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="156dp"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@color/status_in_range"
-        android:src="@drawable/logotext"
-        android:text="@string/name" />
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="156dp"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="@color/status_in_range"
+            android:textSize="40sp" />
 
 
-    <customfonts.MyTextView
-        android:id="@+id/welcome_text"
-        style="@style/TextViewAppearance.Headline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="155dp"
-        android:alpha="0.0"
-        android:text="Handcrafted in India with Love"
-        android:textColor="@color/color_red"
-        android:textSize="14dp" />
+    </RelativeLayout>
 
-</RelativeLayout>
+</layout>

@@ -1,4 +1,4 @@
-package io.left.core.digitalshop.utils.rx;
+package io.left.core.utils.rx;
 
 import io.reactivex.Scheduler;
 

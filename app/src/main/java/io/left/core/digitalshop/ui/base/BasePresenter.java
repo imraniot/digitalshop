@@ -5,8 +5,8 @@ import android.arch.lifecycle.LifecycleObserver;
 import android.os.Bundle;
 
 
-import io.left.core.digitalshop.utils.rx.AppSchedulerProvider;
-import io.left.core.digitalshop.utils.rx.SchedulerProvider;
+import io.left.core.utils.rx.AppSchedulerProvider;
+import io.left.core.utils.rx.SchedulerProvider;
 import io.reactivex.disposables.CompositeDisposable;
 /*
 *  ****************************************************************************

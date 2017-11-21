@@ -15,5 +15,5 @@ package io.left.core.digitalshop.ui.splash;
 import io.left.core.digitalshop.ui.base.MvpView;
 
 public interface SplashMvpView extends MvpView {
-    void goToNextPage(boolean isLogin);
+    void goToNextPage();
 }

@@ -1,4 +1,3 @@
-/*
 
 
 package io.left.core.digitalshop.ui.splash;
@@ -9,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import io.left.core.digitalshop.R;
+import io.left.core.digitalshop.databinding.ActivitySplashBinding;
 import io.left.core.digitalshop.ui.base.BaseActivity;
 
 
@@ -28,19 +28,12 @@ public class SplashActivity extends BaseActivity<SplashMvpView, SplashPresenter>
 
         activitySplashBinding = (ActivitySplashBinding) getViewDataBinding();
 
-        stopService();
 
         Animation downtop = AnimationUtils.loadAnimation(this, R.anim.downtop);
+        //activitySplashBinding.text.setAnimation(downtop);
+        activitySplashBinding.appName.setAnimation(downtop);
 
-        activitySplashBinding.textAppName.setAnimation(downtop);
-
-        presenter.doAction();
-    }
-
-    private void stopService() {
-       // if (ViewUtils.isServiceRunning(FlareService.class, this)) {
-            stopService(new Intent(this, FlareService.class));
-       // }
+//        presenter.doAction();
     }
 
     @Override
@@ -54,17 +47,18 @@ public class SplashActivity extends BaseActivity<SplashMvpView, SplashPresenter>
     }
 
     @Override
-    public void goToNextPage(final boolean isLogin) {
+    public void goToNextPage() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (isLogin) {
+               /* if (isLogin) {
                     startActivity(MainActivity.getStartIntent(SplashActivity.this));
                 } else {
                     startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                }
+                }*/
+
                 finish();
             }
         }, SPLASH_TIME);
     }
-}*/
+}

@@ -14,17 +14,14 @@ import android.text.TextUtils;
 
 import io.left.core.digitalshop.data.helper.PreferenceKey;
 import io.left.core.digitalshop.ui.base.BasePresenter;
-import io.left.core.digitalshop.utils.helper.SharedPref;
+import io.left.core.utils.helper.SharedPref;
 
 
 public class SplashPresenter extends BasePresenter<SplashMvpView> {
     private final String TAG = getClass().getSimpleName();
 
     public void doAction() {
-        if (TextUtils.isEmpty(SharedPref.read(PreferenceKey.MY_USER_NAME_KEY))) {
-            getMvpView().goToNextPage(false);
-        } else {
-            getMvpView().goToNextPage(true);
-        }
+        getMvpView().goToNextPage();
+
     }
 }
