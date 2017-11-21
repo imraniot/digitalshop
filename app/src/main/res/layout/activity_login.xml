@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_type_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Type Your Password"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/edit_text_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_type_password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_text_pass"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:elevation="5dp"
+            android:text="Create Account"
+            android:textColor="@color/white"
+            android:padding="20dp"
+            android:background="@drawable/bg_create_account"
+            android:layout_marginTop="27dp" />
+
+    </RelativeLayout>
+</layout>

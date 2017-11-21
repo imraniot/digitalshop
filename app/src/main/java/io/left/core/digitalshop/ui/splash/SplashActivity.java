@@ -30,10 +30,9 @@ public class SplashActivity extends BaseActivity<SplashMvpView, SplashPresenter>
 
 
         Animation downtop = AnimationUtils.loadAnimation(this, R.anim.downtop);
-        //activitySplashBinding.text.setAnimation(downtop);
         activitySplashBinding.appName.setAnimation(downtop);
 
-//        presenter.doAction();
+        presenter.doAction();
     }
 
     @Override
@@ -51,11 +50,7 @@ public class SplashActivity extends BaseActivity<SplashMvpView, SplashPresenter>
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-               /* if (isLogin) {
-                    startActivity(MainActivity.getStartIntent(SplashActivity.this));
-                } else {
-                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                }*/
+
 
                 finish();
             }
