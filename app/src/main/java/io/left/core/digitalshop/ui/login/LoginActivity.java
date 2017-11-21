@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import io.left.core.digitalshop.R;
 import io.left.core.digitalshop.databinding.ActivityLoginBinding;
+import io.left.core.digitalshop.ui.Home.HomeActivity;
 import io.left.core.digitalshop.ui.base.BaseActivity;
 import io.left.core.utils.helper.Toaster;
 
@@ -41,21 +42,7 @@ public class LoginActivity extends BaseActivity<LoginMvpView, LoginPresenter> im
         super.startUI();
         activityLoginBinding = (ActivityLoginBinding) getViewDataBinding();
         activityLoginBinding.buttonAccoutCreate.setOnClickListener(this);
-
-
         activityLoginBinding.editTextPass.setFocusable(true);
-        activityLoginBinding.editTextPass.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    presenter.validPassword(LoginActivity.this, activityLoginBinding.editTextPass.getText());
-                    return true;
-                }
-
-                return false;
-            }
-        });
     }
 
     @Override
@@ -70,7 +57,7 @@ public class LoginActivity extends BaseActivity<LoginMvpView, LoginPresenter> im
 
     @Override
     public void goToNext() {
-        //startActivity(MainActivity.getStartIntent(this));
+        startActivity(HomeActivity.getStartIntent(this));
         finish();
 
     }
