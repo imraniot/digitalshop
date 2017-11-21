@@ -10,6 +10,7 @@ import android.view.animation.AnimationUtils;
 import io.left.core.digitalshop.R;
 import io.left.core.digitalshop.databinding.ActivitySplashBinding;
 import io.left.core.digitalshop.ui.base.BaseActivity;
+import io.left.core.digitalshop.ui.login.LoginActivity;
 
 
 public class SplashActivity extends BaseActivity<SplashMvpView, SplashPresenter> implements SplashMvpView {
@@ -50,8 +51,7 @@ public class SplashActivity extends BaseActivity<SplashMvpView, SplashPresenter>
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
-
+                startActivity(LoginActivity.getStartIntent(SplashActivity.this));
                 finish();
             }
         }, SPLASH_TIME);

@@ -17,8 +17,6 @@ import io.left.core.digitalshop.ui.base.MvpView;
 
 public interface LoginMvpView extends MvpView {
 
-    void setProfileImage(Bitmap bitmap);
-
     void goToNext();
 
     void onUserNameError(String error);

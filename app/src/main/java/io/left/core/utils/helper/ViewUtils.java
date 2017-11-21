@@ -1,20 +1,4 @@
-/*
- * Copyright (C) 2017 MINDORKS NEXTGEN PRIVATE LIMITED
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     https://mindorks.com/license/apache-v2
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License
- *//*
-
-
-package io.left.core.digitalshop.utils.helper;
+package io.left.core.utils.helper;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -44,10 +28,7 @@ import java.util.concurrent.Semaphore;
 import io.left.core.digitalshop.R;
 
 
-*/
-/**
- * Created by janisharali on 27/01/17.
- *//*
+
 
 
 public final class ViewUtils {
@@ -189,21 +170,6 @@ public final class ViewUtils {
         }
     }
 
-    public static void isScanMedia(String... paths) {
-        MediaScannerConnection.scanFile(FlareApplication.getContext(), paths, null,
-                new MediaScannerConnection.MediaScannerConnectionClient() {
-
-                    @Override
-                    public void onMediaScannerConnected() {
-
-                    }
-
-                    @Override
-                    public void onScanCompleted(String s, Uri uri) {
-
-                    }
-                });
-    }
 
     public static boolean isEmpty(String... strings) {
         for (String string : strings) {
@@ -238,71 +204,6 @@ public final class ViewUtils {
         return false;
     }
 
-    public static String getTimeAgo(long time, final Context context) {
-
-        final int SECOND_MILLIS = 1000;
-        final int MINUTE_MILLIS = 60 * SECOND_MILLIS;
-        final int HOUR_MILLIS = 60 * MINUTE_MILLIS;
-        final int DAY_MILLIS = 24 * HOUR_MILLIS;
-        final long WEEK_IN_MILLIS = DAY_MILLIS * 7;
-        final long YEAR_MILLIS = WEEK_IN_MILLIS * 52;
-        final long FIVE_MINUTE_MILLIS = MINUTE_MILLIS * 5;
-
-        if (time < 1000000000000L) {
-            time *= 1000;
-        }
-        long now = TimeUtil.parseToLocalMilliFromMilli(System.currentTimeMillis());
-
-        if (*/
-/*headerTime > now || *//*
-time <= 0) {
-            String dateString = DateFormat.format("hh:mm a", new Date(now)).toString();
-            return dateString;
-        }
-
-        long diff = now - time;
-
-        //Fixme headerTime related work need to be done when the sender is using greater headerTime than receiver
-
-        if (diff < 0L) {
-            diff = -diff;
-        }
-
-        if (diff <= 2 * MINUTE_MILLIS) {
-            return " " + context.getResources().getString(R.string.just_now);
-        } else if (diff < 60 * MINUTE_MILLIS) {
-
-            return diff / MINUTE_MILLIS + " " + context.getResources().getString(R.string.mins_ago);
-        } else if (diff < 4 * HOUR_MILLIS) {
-            if (diff >= 1 * HOUR_MILLIS && diff < 2 * HOUR_MILLIS) {
-                return diff / HOUR_MILLIS + " " + context.getResources().getString(R.string.hour_ago);
-            } else {
-                return diff / HOUR_MILLIS + " " + context.getResources().getString(R.string.hours_ago);
-            }
-        } else if (diff < 24 * HOUR_MILLIS) {
-            String dateString = DateFormat.format("hh:mm a", new Date(time)).toString();
-            return dateString;
-        } else if (diff < 7 * DAY_MILLIS) {
-            return new SimpleDateFormat("EEEE").format(new Date(time));
-        } else if (diff < 1 * YEAR_MILLIS) {
-
-            int currentYear = TimeUtil.getYear(now);
-            int timeYear = TimeUtil.getYear(time);
-
-            if (currentYear != timeYear) {
-                return DateFormat.format(" dd MMM yyyy ", new Date(time)).toString();
-            }
-
-            return DateFormat.format(" dd MMM", new Date(time)).toString();
-
-        } else if (diff > 1 * YEAR_MILLIS) {
-            String dateString = DateFormat.format(" dd MMM yyyy ", new Date(time)).toString();
-            return dateString;
-        } else {
-            return diff / DAY_MILLIS + " " + context.getResources().getString(R.string.days_ago);
-        }
-    }
 
 
 }
-*/

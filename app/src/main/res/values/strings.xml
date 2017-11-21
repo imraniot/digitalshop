@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">digitalshop</string>
     <string name="name">Digital Shop</string>
+    <string name="password_blank">Enter Password</string>
+    <string name="password_min_eight_character">Enter Min Eight Character Password </string>
+
 </resources>
