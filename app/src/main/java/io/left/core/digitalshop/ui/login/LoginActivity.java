@@ -62,6 +62,10 @@ public class LoginActivity extends BaseActivity<LoginMvpView, LoginPresenter> im
 
     }
 
+    /**
+     * user name validation
+     * @param error
+     */
     @Override
     public void onUserNameError(String error) {
         Toaster.show(error);
