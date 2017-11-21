@@ -19,7 +19,7 @@ Install NodeJS (includes NPM 5.5.1) https://nodejs.org/en/download/
 
 Open terminal and run
 
-Run command npm -g install solc 
+Run command  ``` npm -g install solc ```
  
 Download web3j https://github.com/web3j/web3j/releases
 
@@ -28,8 +28,8 @@ Now open android studio terminal and write
 solcjs app\keystore\contracts\Product.sol --bin --abi --optimize --overwrite -o app\keystore\contracts\build
 ```
 Then write down the below command 
-
+```
 web3j solidity generate app\keystore\contracts\build\Product.bin app\keystore\contracts\build\Product.abi -o app\src\main\java -p io.left.core.newsblock.data.remote.contracts
-
+```
 Now we can use the contract api 
 
