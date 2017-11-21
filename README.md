@@ -6,8 +6,8 @@ This tutorial is meant for those with a basic knowledge of Ethereum and smart co
 
 # What we'll do
 
-Setting up the development environment.
-Set up solidity and web3j.
+-  Setting up the development environment.
+- Set up solidity and web3j.
 
 
 
