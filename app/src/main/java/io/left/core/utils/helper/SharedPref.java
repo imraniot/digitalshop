@@ -1,4 +1,4 @@
-package io.left.core.digitalshop.utils.helper;
+package io.left.core.utils.helper;
 
 import android.content.Context;
 import android.content.SharedPreferences;

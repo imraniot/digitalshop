@@ -1,4 +1,4 @@
-package io.left.core.digitalshop.utils;/*
+package io.left.core.utils;/*
 package io.left.digitalblock.utils;
 
 import android.content.Context;
